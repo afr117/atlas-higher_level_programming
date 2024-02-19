@@ -1,6 +1,7 @@
--- Print the full description of the table first_table
-SELECT CONCAT('Table: ', TABLE_NAME) AS 'Table',
-       CONCAT('Create Table: ', TABLE_SCHEMA, '.', CREATE_STATEMENT) AS 'Create Table'
-FROM information_schema.TABLES
-WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'first_table';
+USE hbtn_0c_0;
+
+CREATE TABLE IF NOT EXISTS first_table (
+	    id INT,
+	    name VARCHAR(256)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
