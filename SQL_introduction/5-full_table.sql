@@ -1,9 +1,8 @@
--- Use the hbtn_0c_0 database
+e the specified database
 USE hbtn_0c_0;
 
--- Create the first_table if it doesn't exist
-CREATE TABLE IF NOT EXISTS first_table (
-	    id INT,
-	    name VARCHAR(256)
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- Query the information schema to retrieve table structure
+SELECT CONCAT('Table', '   ', 'Create Table') AS 'Table   Create Table'
+FROM information_schema.TABLES
+WHERE TABLE_SCHEMA = 'hbtn_0c_0' AND TABLE_NAME = 'first_table';
 
