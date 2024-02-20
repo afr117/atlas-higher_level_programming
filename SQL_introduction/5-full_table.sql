@@ -1,2 +1,2 @@
 --Table creation
-show create TABLE first;
+SHOW CREATE TABLE first;
