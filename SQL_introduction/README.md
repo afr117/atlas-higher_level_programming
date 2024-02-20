@@ -4,9 +4,18 @@ This project aims to introduce basic SQL tasks. Below are the tasks and their co
 
 ## Tasks
 
+
+
+
+
+
 - **0-list_databases.sql**: SQL script to list all databases on the MySQL server.
 
 ## Instructions
+
+
+
+
 
 1. Clone this repository.
 2. Make sure MySQL 8.0 is installed on your Ubuntu 20.04 LTS system.
