@@ -1,2 +1,3 @@
 --Table creation
-SHOW CREATE TABLE first_table;
+CREATE TABLE first_table;
+SHOW COLUMNS FROM first_table;
