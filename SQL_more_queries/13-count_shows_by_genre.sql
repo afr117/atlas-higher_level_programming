@@ -9,5 +9,5 @@ JOIN
 GROUP BY
     g.name
 ORDER BY
-    number_of_shows DESC;
+    number_of_shows DESC, g.name ASC;
 
