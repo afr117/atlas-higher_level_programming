@@ -1,4 +1,4 @@
-alculate the average temperature (Fahrenheit) by city and order by temperature (descending)
+-- Calculate the average temperature (Fahrenheit) by city and order by temperature (descending)
 
 -- Select the city and calculate the average temperature for each city
 SELECT city, AVG(temperature) AS avg_temp
