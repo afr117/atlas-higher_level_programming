@@ -8,7 +8,8 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} username password database_name state_name".format(sys.argv[0]))
+        print("Usage: {} username password database_name state_name"
+              .format(sys.argv[0]))
         sys.exit(1)
 
     username, password, database_name, state_name = sys.argv[1:5]
@@ -21,9 +22,10 @@ if __name__ == "__main__":
                              db=database_name)
 
         cur = db.cursor()
-        cur.execute("SELECT cities.name FROM cities \
-                    INNER JOIN states ON cities.state_id = states.id \
-                    WHERE states.name = %s ORDER BY cities.id ASC", (state_name,))
+        cur.execute("SELECT cities.name FROM cities "
+                    "INNER JOIN states ON cities.state_id = states.id "
+                    "WHERE states.name = %s ORDER BY cities.id ASC",
+                    (state_name,))
 
         rows = cur.fetchall()
         cities = [row[0] for row in rows]
