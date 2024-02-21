@@ -19,8 +19,8 @@ def filter_states(username, password, database):
         cursor = db.cursor()
 
         # Execute SQL query
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' "
-                       "ORDER BY id ASC")
+        cursor.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' "
+               "ORDER BY id ASC")
         states = cursor.fetchall()
 
         # Print results
