@@ -11,16 +11,12 @@ import MySQLdb
 def filter_states(username, password, database):
     try:
         # Connect to MySQL server
-        db = MySQLdb.connect(host="localhost",
-                             port=3306,
-                             user=username,
-                             passwd=password,
-                             db=database)
+        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
         cursor = db.cursor()
 
         # Execute SQL query
         cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' "
-                        "ORDER BY id ASC")
+                       "ORDER BY id ASC")
         states = cursor.fetchall()
 
         # Print results
