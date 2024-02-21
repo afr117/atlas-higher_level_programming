@@ -6,6 +6,7 @@ Script that lists all states from the database hbtn_0e_0_usa
 import sys
 import MySQLdb
 
+
 def select_states(username, password, database):
     try:
         # Connect to MySQL server
@@ -27,6 +28,7 @@ def select_states(username, password, database):
         print("MySQL Error:", e)
         sys.exit(1)
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
@@ -34,3 +36,4 @@ if __name__ == "__main__":
 
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
     select_states(username, password, database)
+
