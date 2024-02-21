@@ -10,7 +10,11 @@ import MySQLdb
 def select_states(username, password, database):
     try:
         # Connect to MySQL server
-        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+        db = MySQLdb.connect(host="localhost",
+                             port=3306,
+                             user=username,
+                             passwd=password,
+                             db=database)
         cursor = db.cursor()
 
         # Execute SQL query
@@ -36,4 +40,3 @@ if __name__ == "__main__":
 
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
     select_states(username, password, database)
-
