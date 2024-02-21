@@ -1,5 +1,5 @@
 -- List all genres and the number of shows linked to each
-ELECT
+SELECT
     tg.name AS genre,
     COUNT(tsg.show_id) AS number_of_shows
 FROM
