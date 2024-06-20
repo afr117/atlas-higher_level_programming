@@ -51,7 +51,8 @@ To import an SQL dump file into a database:
     ```
 2. Import the SQL dump:
     ```bash
-    curl "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" -s | mysql -uroot -p hbtn_0d_tvshows
+    curl "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" -s -o hbtn_0d_tvshows.sql
+    mysql -hlocalhost -uroot -p hbtn_0d_tvshows < hbtn_0d_tvshows.sql
     ```
 
 ## Task: My Privileges!
